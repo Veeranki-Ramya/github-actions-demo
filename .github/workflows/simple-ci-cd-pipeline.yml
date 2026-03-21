@@ -1,0 +1,23 @@
+name: simple-ci-cd-pipeline
+
+on:
+  push: 
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print name
+        run: echo "This is Ramya"
+
+      - name: print pwd
+        run: pwd
+
+      - name: create file
+        run: echo "hi how are you" > sample.txt
+
+      - name: shows file
+        run: cat sample.txt
