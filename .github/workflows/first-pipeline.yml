@@ -1,0 +1,20 @@
+name: My First Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello
+        run: echo "Hello Ramya, this is your first GitHub Actions pipeline!"
+
+      - name: Print Date
+        run: date
+
+      - name: List Files
+        run: ls -l
